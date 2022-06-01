@@ -21,12 +21,23 @@ inicio
 fimfuncao
 
 // Parâmetros:
+//    x: Primeiro número para cálculo da Multiplicação
+//    y: Segundo número para cálculo da Multiplicação
+// Efeito: Retornar o resultado da Multiplicação entre dois números
+funcao calculaMultiplicacao(x:real; y:real) : real
+var
+
+inicio
+    retorne x * y
+fimfuncao
+
+// Parâmetros:
 //     soma: Primeiro parâmetro, o resultado da Soma
 //     subracao: Segundo parâmetro, o resultado da Subtração
 //     multiplicacao: Terceiro parâmetro, o resultado da Multiplicação
 //     divisao: Quatro parâmetro, o resultado da Divisão
 // Efeito: Imprimir resultado das Operações
-procedimento mostraRelatorio(soma:real;subtracao:real)
+procedimento mostraRelatorio(soma:real;subtracao:real;multiplicacao:real)
 var
 
 inicio
@@ -34,8 +45,10 @@ inicio
      escreval("RESULTADO DAS 4 OPERAÇÕES")
      escreval("=========================")
      escreval()
-     escreval("SOMA..... = ", soma:3:2)
-     escreval("SUBTRAÇÃO = ",subtracao:3:2)
+     escreval("SOMA......... = ",soma:3:2)
+     escreval("SUBTRAÇÃO.... = ",subtracao:3:2)
+     escreval("MULTIPLICAÇÃO = ",multiplicacao:3:2)
+     
 fimprocedimento
 
      
@@ -61,8 +74,9 @@ Inicio
     
     soma <- calculaSoma(x,y)
     subtracao <- calculaSubtracao(x,y)
+    multiplicacao <- calculaMultiplicacao(x,y)
     
-    mostraRelatorio(soma,subtracao)
+    mostraRelatorio(soma,subtracao,multiplicacao)
     
 
 Fimalgoritmo
