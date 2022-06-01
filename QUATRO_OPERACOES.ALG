@@ -1,9 +1,7 @@
 // Parâmetros:
-// Disciplina   : [Linguagem e Lógica de Programação] 
-// Professor   : Antonio Carlos Nicolodi 
 //    x: Primeiro número para cálculo da Soma
 //    y: Segundo número para cálculo da Soma
-// Efeito: Retornar o resultado da soma entre dois números
+// Efeito: Retornar o resultado da Soma entre dois números
 funcao calculaSoma(x:real; y:real) : real
 var
 
@@ -12,12 +10,23 @@ inicio
 fimfuncao
 
 // Parâmetros:
+//    x: Primeiro número para cálculo da Subtração
+//    y: Segundo número para cálculo da Subtração
+// Efeito: Retornar o resultado da Subtração entre dois números
+funcao calculaSubtracao(x:real; y:real) : real
+var
+
+inicio
+    retorne x - y
+fimfuncao
+
+// Parâmetros:
 //     soma: Primeiro parâmetro, o resultado da Soma
 //     subracao: Segundo parâmetro, o resultado da Subtração
 //     multiplicacao: Terceiro parâmetro, o resultado da Multiplicação
 //     divisao: Quatro parâmetro, o resultado da Divisão
 // Efeito: Imprimir resultado das Operações
-procedimento mostraRelatorio(soma:real)
+procedimento mostraRelatorio(soma:real;subtracao:real)
 var
 
 inicio
@@ -25,8 +34,8 @@ inicio
      escreval("RESULTADO DAS 4 OPERAÇÕES")
      escreval("=========================")
      escreval()
-     escreval("SOMA = ", soma:3:2)
-     
+     escreval("SOMA..... = ", soma:3:2)
+     escreval("SUBTRAÇÃO = ",subtracao:3:2)
 fimprocedimento
 
      
@@ -51,8 +60,9 @@ Inicio
     leia(y)
     
     soma <- calculaSoma(x,y)
+    subtracao <- calculaSubtracao(x,y)
     
-    mostraRelatorio(soma)
+    mostraRelatorio(soma,subtracao)
     
 
 Fimalgoritmo
